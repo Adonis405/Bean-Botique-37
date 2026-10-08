@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Offers &amp; Subscriptions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+  <link href="style/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid navbar-shell">
+      <a class="navbar-brand" href="index.html">
+        <p><span class="first-word">Bean</span> Boutique</p>
+      </a>
+
+      <div class="navbar-toolbar ms-auto ms-lg-3 order-lg-last">
+        <div class="cart-container">
+          <button class="cart-icon-btn" id="cartToggleBtn" type="button" aria-label="Shopping Cart">
+            🛒<span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-menu-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Coffee Selection</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipment.html">Brewing Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events &amp; Workshops</a></li>
+          <li class="nav-item"><a class="nav-link active" href="subscriptions.html">Offers &amp; Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white text-center py-4 cafe-header">
+    <h1>Offers &amp; Subscriptions</h1>
+    <p class="lead mb-0">Fresh roasts and curated flights delivered directly to you</p>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-4 mb-5">
+      <!-- Plan 1 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card h-100 custom-box p-3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Weekly Roaster's Choice</h5>
+            <p class="card-text small textsecondary">Receive freshly roasted beans delivered to your doorstep every single week.</p>
+            <p class="card-text small"><strong>Includes:</strong> 250g bag of curated seasonal single-origin roasts.</p>
+            <div class="mt-auto pt-3">
+              <p class="fw-bold fs-5 mb-2">$14.00 <span class="fs-6 fw-normal textsecondary">/ week</span></p>
+              <button class="btn btn-dark w-100 add-to-cart-btn" data-name="Weekly Roaster's Choice Subscription" data-price="14.00">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card h-100 custom-box p-3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Bi-Weekly Espresso Club</h5>
+            <p class="card-text small textsecondary">Balanced, rich espresso blends shipped directly from roaster every two weeks.</p>
+            <p class="card-text small"><strong>Includes:</strong> 500g bag of seasonal espresso roasts.</p>
+            <div class="mt-auto pt-3">
+              <p class="fw-bold fs-5 mb-2">$26.00 <span class="fs-6 fw-normal textsecondary">/ 2 weeks</span></p>
+              <button class="btn btn-dark w-100 add-to-cart-btn" data-name="Bi-Weekly Espresso Club" data-price="26.00">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card h-100 custom-box p-3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Monthly Explorer Box</h5>
+            <p class="card-text textsecondary small">A monthly tasting flight of distinct micro-lots and specialty origins with brew cards.</p>
+            <p class="card-text small"><strong>Includes:</strong> 3 x 100g sample bags and brewing recipe cards.</p>
+            <div class="mt-auto pt-3">
+              <p class="fw-bold fs-5 mb-2">$32.00 <span class="fs-6 fw-normal textsecondary">/ month</span></p>
+              <button class="btn btn-dark w-100 add-to-cart-btn" data-name="Monthly Explorer Box" data-price="32.00">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Special Offers Section -->
+    <section class="p-4 bg-dark rounded custom-box mb-4" data-aos="fade-up">
+      <h3 class="mb-3">Seasonal Special Offers</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 border rounded border-secondary special-offers h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h5>Bundle &amp; Save: Starter Brew Kit</h5>
+              <p class="small mb-2 textsecondary">Get a Classic French Press + 250g Colombian Supremo for just $38.00 (Save 15%).</p>
+            </div>
+            <button class="btn btn-dark btn-sm add-to-cart-btn align-self-start mt-2" data-name="Starter Brew Kit Bundle" data-price="38.00">Add Bundle to Cart</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 border rounded border-secondary special-offers h-100">
+            <h5>Free Shipping on Orders Over $50</h5>
+            <p class="small mb-1 textsecondary">Use coupon code <span class="badge bg-secondary">COFFEE2026</span> at checkout for free priority delivery and 10% off your entire order.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center g-4">
+  <!-- Use col-md-9 to make it shorter/narrower. (Use col-md-7 or 8 if you want it even smaller) -->
+
+<div class="card custom-box p-3">
+    <div class="d-flex justify-content-between align-items-start">
+        <h5 class="card-title text-light mb-2">Have Questions?</h5>
+        <!-- Social Media Direct Links -->
+        <div class="d-flex gap-2 ms-2">
+          <a href="mailto:events@beanboutique.com" class="text-light fs-5" title="Email Us" aria-label="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a href="https://t.me/WK37K" target="_blank" rel="noopener noreferrer" class="text-light fs-5" title="Chat on Telegram" aria-label="Telegram">
+            <i class="bi bi-telegram"></i>
+          </a>
+        </div>
+      </div>
+      <p class="text-warning large mb-2">
+        Reach out to us.
+      </p>
+      <div class="small">
+        <span class="me-3"><strong>Email:</strong> events@beanboutique.com</span>
+        <span><strong>Phone:</strong> (+95) 922-600-3080</span>
+      </div>
+  </div>
+  </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cafe-header text-white text-center py-3">
+    <p class="mb-0">&copy; Wai Lhyan Khant 2026D0447 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>

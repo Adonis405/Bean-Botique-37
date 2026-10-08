@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+  <link href="style/style.css" rel="stylesheet">
+  <link href="style/shop_cart_style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid navbar-shell">
+      <a class="navbar-brand" href="index.html">
+        <p><span class="first-word">Bean</span> Boutique</p>
+      </a>
+
+    <div class="navbar-toolbar ms-auto ms-lg-3 order-lg-last">
+        <div class="cart-container">
+          <button class="cart-icon-btn" id="cartToggleBtn" type="button" aria-label="Shopping Cart">
+            🛒<span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-menu-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Coffee Selection</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipment.html">Brewing Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events &amp; Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="subscriptions.html">Offers &amp; Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white text-center py-4 cafe-header">
+    <h1>Your Shopping Cart</h1>
+  </header>
+
+  <main class="container my-4" data-aos="zoom-in">
+    <div class="row py-3">
+      <!-- Cart Items Column -->
+      <div class="col-lg-7">
+        <div id="cart-items" class="d-flex flex-column gap-3 mb-4">
+          <!-- Dynamically populated via script.js -->
+        </div>
+
+        <!-- Empty Cart Message -->
+        <div id="empty-cart-message" class="card custom-box text-center py-5 d-none">
+          <p class="fs-5 mb-3 text-white">Your cart is currently empty.</p>
+          <div>
+            <a href="products.html" class="btn btn-outline-light">Browse Coffee Selection</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary Column -->
+      <div class="col-lg-5">
+        <div class="card custom-box p-3">
+          <h4 class="card-title mb-3">Order Summary</h4>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-white">Subtotal</span>
+            <span id="cart-subtotal" class="fw-bold">$0.00</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-white">Discount (10%)</span>
+            <span id="cart-discount" class="text-success">$0.00</span>
+          </div>
+          <div class="input-group input-group-sm mb-2">
+            <input type="text" id="coupon-input" class="form-control bg-dark text-light border-white" placeholder="Promo code (e.g. COFFEE2026)">
+            <button id="apply-coupon-btn" class="btn btn-outline-light" type="button">Apply</button>
+          </div>
+          <div id="coupon-status" class="small mb-2"></div>
+          <hr class="border-white">
+          <div class="d-flex justify-content-between mb-3 fw-bold fs-5">
+            <span>Total</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-btn" class="btn btn-dark w-100 mb-2">Proceed to Checkout</button>
+          <button id="clear-cart-btn" class="btn btn-outline-danger w-100">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations Section: First Three Coffees -->
+    <section class="mt-4 pt-3 border-top border-white" id="cart-recommendations" data-aos="fade-up">
+      <h4 class="mb-3">Recommended Coffees for You</h4>
+      <p class="text-white small mb-3">Add one of our signature café favorites to your order with a single click:</p>
+      <div class="row g-3">
+        <!-- 1. Espresso -->
+        <div class="col-md-4">
+          <div class="card custom-box p-3 h-100 text-center">
+            <img src="images/coffee1.jpg" alt="Espresso" class="rounded mb-2" style="height: 130px; width: 100%; object-fit: cover;">
+            <h6 class="text-light mb-1">Espresso</h6>
+            <p class="text-white small mb-2">Rich, syrupy shot with golden crema.</p>
+            <div class="fw-bold mb-2">$2.75</div>
+            <button class="btn btn-outline-light btn-sm add-to-cart-btn mt-auto" data-name="Espresso" data-price="2.75" data-image="images/coffee1.jpg">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- 2. Americano -->
+        <div class="col-md-4">
+          <div class="card custom-box p-3 h-100 text-center">
+            <img src="images/coffee2.jpg" alt="Americano" class="rounded mb-2 img-zoom" style="height: 130px; width: 100%; object-fit: cover;">
+            <h6 class="text-light mb-1">Americano</h6>
+            <p class="text-white small mb-2">Espresso over hot water for a smooth, bold cup.</p>
+            <div class="fw-bold mb-2">$3.25</div>
+            <button class="btn btn-outline-light btn-sm add-to-cart-btn mt-auto" data-name="Americano" data-price="3.25" data-image="images/coffee2.jpg">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- 3. Café Latte -->
+        <div class="col-md-4">
+          <div class="card custom-box p-3 h-100 text-center">
+            <img src="images/coffee3.jpg" alt="Café Latte" class="rounded mb-2" style="height: 130px; width: 100%; object-fit: cover;">
+            <h6 class="text-light mb-1">Café Latte</h6>
+            <p class="text-white small mb-2">Espresso blended with silky steamed milk.</p>
+            <div class="fw-bold mb-2">$4.50</div>
+            <button class="btn btn-outline-light btn-sm add-to-cart-btn mt-auto" data-name="Café Latte" data-price="4.50" data-image="images/coffee3.jpg">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cafe-header text-white text-center py-3">
+    <p class="mb-0">&copy; Wai Lhyan Khant 2026D0447 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Search Input */
+.animated-search {   /* Style and animation for the search bar */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  background-color: #1C1917;
+  border: 1px solid #2A2724;
+  color: #F5EFEB;
+}
+
+.animated-search::placeholder {
+  color: #A8A199;
+}
+
+.animated-search:focus {
+  border-color: #C88A58;
+  box-shadow: 0 0 10px rgba(200, 138, 88, 0.25);
+  transform: scale(1.01);
+  background-color: #2B2623;
+  color: #F5EFEB;
+  outline: none;
+}
+/* Product Card */
+
+.product-card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Hover Zoom */
+.product-card .img-zoom {
+  transition: transform 0.3s ease;
+  min-width: 0;
+}
+
+.product-card:hover .img-zoom {
+  transform: scale(1.09); /* Zooms image 115% */
+}
+
+.add-to-cart-btn 
+{ width: 100%; 
+  min-width: 0;
+   white-space: normal; 
+}
+
+.info-btn {
+  width: 28px;
+  height: 28px;    
+  padding: 0;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* Coffee-Themed Buttons */
+.btn-dark {
+  background-color: #48392e;
+  border-color: #ca9e6f;
+  color: #F5EFEB;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  background-color: #ca9e6f !important;
+  border-color: #ca9e6f !important;
+  color: #1C1917 !important;
+  box-shadow: 0 4px 12px rgba(202, 158, 111, 0.35);
+  transform: translateY(-2px);
+}
+
+.cart-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

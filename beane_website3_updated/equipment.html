@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique - Brewing Equipment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+  <link href="style/shop_cart_style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid navbar-shell">
+      <a class="navbar-brand" href="index.html">
+        <p><span class="first-word">Bean</span> Boutique</p>
+      </a>
+
+     <div class="navbar-toolbar ms-auto ms-lg-3 order-lg-last">
+        <div class="cart-container">
+          <button class="cart-icon-btn" id="cartToggleBtn" type="button" aria-label="Shopping Cart">
+            🛒<span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-menu-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Coffee Selection</a></li>
+          <li class="nav-item"><a class="nav-link active" href="equipment.html">Brewing Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events &amp; Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="subscriptions.html">Offers &amp; Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white text-center py-4 cafe-header">
+    <h1>Brewing Equipment</h1>
+    <p class="lead mb-0">Professional tools for craft home-brewing</p>
+  </header>
+
+<main class="container my-4">
+  <div class="row g-4" id="equipment-list">
+     <!-- 1. Classic French Press -->
+<div class="col-12 col-sm-6 col-lg-4 product-col" data-name="Classic French Press" data-aos="fade-up">
+  <div class="card product-card custom-box h-100 p-3">
+    <div class="overflow-hidden rounded">
+      <img src="images/equipment1.png" class="card-img-top img-zoom" alt="Classic French Press" loading="lazy">
+    </div>
+    <div class="card-body d-flex flex-column px-0 pb-0">
+      <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+        <h2 class="h5 card-title mb-0">Classic French Press</h2>
+        <button type="button" class="btn btn-outline-warning rounded-circle p-0 info-btn flex-shrink-0"
+        
+          aria-expanded="false" aria-controls="equip-fact-1"
+          aria-label="Show usage tip for Classic French Press">i</button>
+      </div>
+      <!-- Reveal Tip Panel -->
+      <div class="collapse mb-2" id="equip-fact-1">
+        <div class="p-2 small rounded bg-dark border border-secondary text-light">
+          <em>Usage Tip:</em> Use coarsely ground coffee, steep in 94°C water for 4 minutes, then press plunger gently.
+        </div>
+      </div>
+      <hr>
+      <p class="card-text small flex-grow-1 textsecondary">Heavy-duty borosilicate glass coffee maker with 4-level stainless plunger filtration system.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+        <span class="fw-bold fs-5">$29.99</span>
+        <button type="button" class="btn btn-dark add-to-cart-btn flex-grow-1" data-name="Classic French Press" data-price="29.99" data-image="images/equipment3.png">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Stainless Steel Pour-Over Kettle -->
+<div class="col-12 col-sm-6 col-lg-4 product-col" data-name="Stainless Steel Pour-Over Kettle" data-aos="fade-up">
+  <div class="card product-card custom-box h-100 p-3">
+    <div class="overflow-hidden rounded">
+      <img src="images/equipment2.png" class="card-img-top img-zoom" alt="Stainless Steel Pour-Over Kettle" loading="lazy">
+    </div>
+    <div class="card-body d-flex flex-column px-0 pb-0">
+      <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+        <h2 class="h5 card-title mb-0">Pour-Over Kettle</h2>
+        <button type="button" class="btn btn-outline-warning rounded-circle p-0 info-btn flex-shrink-0"
+         
+          aria-expanded="false" aria-controls="equip-fact-2"
+          aria-label="Show usage tip for Pour-Over Kettle">i</button>
+      </div>
+      <div class="collapse mb-2" id="equip-fact-2">
+        <div class="p-2 small rounded bg-dark border border-secondary text-light">
+          <em>Usage Tip:</em> Pour in steady concentric circles starting from the center outward to ensure even saturation.
+        </div>
+      </div>
+      <hr>
+      <p class="card-text small flex-grow-1 textsecondary">Precision gooseneck spout designed for steady laminar water flow during coffee extraction.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+        <span class="fw-bold fs-5">$39.99</span>
+        <button type="button" class="btn btn-dark add-to-cart-btn flex-grow-1" data-name="Stainless Steel Pour-Over Kettle" data-price="39.99" data-image="images/equipment4.png">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Precision Manual Burr Grinder -->
+<div class="col-12 col-sm-6 col-lg-4 product-col" data-name="Manual Burr Grinder" data-aos="fade-up">
+  <div class="card product-card custom-box h-100 p-3">
+    <div class="overflow-hidden rounded">
+      <img src="images/equipment3.png" class="card-img-top img-zoom" alt="Precision Manual Burr Grinder" loading="lazy">
+    </div>
+    <div class="card-body d-flex flex-column px-0 pb-0">
+      <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+        <h2 class="h5 card-title mb-0">Manual Burr Grinder</h2>
+        <button type="button" class="btn btn-outline-warning rounded-circle p-0 info-btn flex-shrink-0"
+         
+          aria-expanded="false" aria-controls="equip-fact-3"
+          aria-label="Show usage tip for Manual Burr Grinder">i</button>
+      </div>
+      <div class="collapse mb-2" id="equip-fact-3">
+        <div class="p-2 small rounded bg-dark border border-secondary text-light">
+          <em>Usage Tip:</em> Turn the base dial clockwise for finer grind and counter-clockwise for coarser drip brew.
+        </div>
+      </div>
+      <hr>
+      <p class="card-text small flex-grow-1 textsecondary">Conical ceramic burrs with adjustable dial settings from ultra-fine espresso to coarse French press.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+        <span class="fw-bold fs-5">$24.99</span>
+        <button type="button" class="btn btn-dark add-to-cart-btn flex-grow-1" data-name="Manual Burr Grinder" data-price="24.99" data-image="images/equipment1.png">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Ceramic Pour-Over Dripper Set -->
+<div class="col-12 col-sm-6 col-lg-4 product-col" data-name="Pour-Over Dripper Set" data-aos="fade-up" >
+  <div class="card product-card custom-box h-100 p-3">
+    <div class="overflow-hidden rounded">
+      <img src="images/equipment4.png" class="card-img-top img-zoom" alt="Ceramic Pour-Over Dripper Set" loading="lazy">
+    </div>
+    <div class="card-body d-flex flex-column px-0 pb-0">
+      <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+        <h2 class="h5 card-title mb-0">Pour-Over Dripper Set</h2>
+        <button type="button" class="btn btn-outline-warning rounded-circle p-0 info-btn flex-shrink-0"
+     
+          aria-expanded="false" aria-controls="equip-fact-4"
+          aria-label="Show usage tip for Pour-Over Dripper Set">i</button>
+      </div>
+      <div class="collapse mb-2" id="equip-fact-4">
+        <div class="p-2 small rounded bg-dark border border-secondary text-light">
+          <em>Usage Tip:</em> Rinse your paper filter with hot water before adding 15g of medium coffee grounds.
+        </div>
+      </div>
+      <hr>
+      <p class="card-text small flex-grow-1 textsecondary">Heat-retaining V60 spiral cone with 500ml borosilicate glass server and bamboo base.</p>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+        <span class="fw-bold fs-5">$18.50</span>
+        <button type="button" class="btn btn-dark add-to-cart-btn flex-grow-1" data-name="Pour-Over Dripper Set" data-price="18.50" data-image="images/equipment2.png">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</main>
+
+  <footer class="cafe-header text-white text-center py-3">
+    <p class="mb-0">&copy; Wai Lhyan Khant 2026D0447 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script src="infobtn.js"></script>
+</body>
+</html>
